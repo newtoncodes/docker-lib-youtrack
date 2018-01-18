@@ -1,2 +1,3 @@
-# docker-lib-youtrack
-Docker youtrack image based on ubuntu.
+# YouTrack on ubuntu docker image
+
+Basic JetBrains YouTrack image, no additional functionality. 
