@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 docker push newtoncodes/youtrack
-docker push newtoncodes/youtrack:5.7
+docker push newtoncodes/youtrack:2017.4
