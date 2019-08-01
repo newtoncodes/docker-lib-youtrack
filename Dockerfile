@@ -1,5 +1,4 @@
-FROM java:8-jre
-MAINTAINER tech@uniplug.ru
+FROM openjdk:8-jre-stretch
 
 RUN mkdir -p /opt/youtrack/data /opt/youtrack/backup /opt/youtrack/bin
 
@@ -7,8 +6,8 @@ WORKDIR /opt/youtrack
 
 ENV YOUTRACK_VERSION 2019.2.54193
 
-RUN apt-get update && \
-    apt-get install -y supervisor && \
+RUN apt-get -o Acquire::Check-Valid-Until=false update
+RUN apt-get install -y supervisor && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget \
